@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Isabelle Xu</title>
-  <link rel="stylesheet" href="css/index.css" type="text/css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
     <div class="topnav">
         <a href="#" class="logo">Isabelle Xu</a>
         <div class="topnav-right">
-            <a href="#">About</a>
+            <a href="#about">About</a>
             <a href="#">Illustration</a>
             <a href="#">CS</a>
             <a href="#">Games</a>
@@ -21,15 +26,17 @@
     <div id="home">
         <header>
             <h1 class="name">ISABELLE XU</h1>
-            <!-- <h2>My Stuff</h2> -->
-            <div>
-                <a href="#about"></a>
-            </div>
+            <h2 class="blurb">Working on Schrödinger's webcomic</h2>
+            <a href="#about">
+                <img width="40" height="40" alt=""
+                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4="
+                    class="downArrow bounce" />
+            </a>
         </header>
         <div class="background"></div>
-        <div class="about">
-            <div id="about">
-                <h1>Hello World</h1>
+        <div class="container">
+            <div class="fade" id="about">
+                <h1>"Hello, World"</h1>
             </div>
         </div>
     </div>
@@ -45,5 +52,6 @@
     <div>
 
     </div>
-  </body>
+</body>
+
 </html>
