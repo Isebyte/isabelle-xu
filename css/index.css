@@ -6,7 +6,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.85;
     padding: 0.4rem;
     padding-right: 160px;
     position: fixed;
@@ -208,4 +208,28 @@ header {
     width: 60rem;
     margin: 0 auto;
     margin-top: 8em;
+    font-size: 1.2em;
+}
+
+#myPic {
+  float:left;
+  margin-right: 2em;
+}
+
+#blurb {
+  margin-top: 2em;
+}
+
+.social_media_icon {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.social_media_icon:hover {
+  opacity: 0.8;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
