@@ -277,6 +277,13 @@ header {
   justify-content: center;
 }
 
+.centerImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 /* ----------------------- CS Page -----------------------*/
 /* Timeline thanks to https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 */
 .timeline ul li {
@@ -413,3 +420,6 @@ header {
     border-color: transparent #F45B69 transparent transparent;
   }
 }
+
+/* ----------------------- Illustrations Page -----------------------*/
+
