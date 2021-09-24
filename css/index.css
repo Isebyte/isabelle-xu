@@ -7,10 +7,15 @@ body {
   --accentColor: rgb(243, 185, 97);
 }
 
+time {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .hrYellow {
   display: block;
   height: 1px;
-  width: 8vw;
+  width: 7vw;
   border: 0;
   border-top: 2px solid var(--accentColor);
   margin: 0 auto;
@@ -281,6 +286,8 @@ header {
   margin: 0 auto;
   padding-top: 50px;
   background: rgb(32, 32, 32);
+  font-size: 15px;
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
 }
 
 .timeline ul li::after {
