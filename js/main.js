@@ -15,10 +15,11 @@ function initNavLinks() {
     for (let i = 0; i < pages.length; ++i) {
         console.log("init " + pages[i].id);
         let targetId = pages[i].id;
-        navLinks[i].onclick = function () {
+        navLinks[i].onclick = function (ev) {
             console.log(targetId + " clicked");
             showPage(targetId);
             isInView();
+            if(targetId == "cs") ev.preventDefault(); // prevent extra scroll
         }
     }
 
