@@ -50,7 +50,7 @@ hr {
     overflow: hidden;
     background-color: black;
     opacity: 0.85;
-    padding: 0.4rem;
+    /* padding: 0.4rem; */
     padding-right: 160px;
     position: fixed;
     top: 0;
@@ -66,8 +66,8 @@ hr {
     padding: 12px;
     padding-right: 48px;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1em;
+    line-height: 3.5vh;
     border-radius: 4px;
 }
 
@@ -110,7 +110,7 @@ header {
 }
 
 .name {
-    font-size: 3.5em;
+    font-size: 5vw;
     letter-spacing: 0.1em;
     color: white;
 }
@@ -127,7 +127,7 @@ header {
             rgba(255, 255, 255, 0.05),
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.3)),
-        url(../img/illustration/Valley.jpg) center no-repeat fixed;
+        url(../img/illustration/Cozy_-_2.jpg) center no-repeat fixed;
     background-size: cover;
     z-index: -1;
     position: fixed;
@@ -257,11 +257,13 @@ header {
 #myPic {
   float:left;
   margin-right: 2em;
+  border-radius: 50%;
 }
 
-#blurb {
-  margin-top: 2em;
+#intro {
+  margin-top: 3em;
 }
+
 
 .social_media_icon {
   margin-right: 10px;

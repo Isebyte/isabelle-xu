@@ -7,6 +7,11 @@ window.onload = function () {
     window.addEventListener("load", isInView);
     window.addEventListener("scroll", isInView);
 
+    let siteWidth = 1280;
+    let scale = screen.width / siteWidth;
+
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');
+
 }
 
 function initNavLinks() {
@@ -19,7 +24,7 @@ function initNavLinks() {
             console.log(targetId + " clicked");
             showPage(targetId);
             isInView();
-            if(targetId == "cs") ev.preventDefault(); // prevent extra scroll
+            if (targetId == "cs") ev.preventDefault(); // prevent extra scroll
         }
     }
 
