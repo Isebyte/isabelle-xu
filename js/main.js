@@ -1,5 +1,5 @@
 window.onload = function () {
-    console.log("Window onload");
+    // console.log("Window onload");
     showPage("home");
     addSmoothScrolling();
     fadeInOnScroll();
