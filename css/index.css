@@ -288,10 +288,15 @@ header {
 
 #intro-wrapper {
   margin-top: 10vh;
+  margin-right: 15vw;
 }
 
 #helloWorld {
   text-align: center;
+}
+
+#hi {
+  margin-left: 10vw;
 }
 
 .social_media_icon {
@@ -316,6 +321,11 @@ header {
 
   #intro-wrapper {
     margin-top: 0;
+    margin-right: 0;
+  }
+
+  #hi {
+    margin-left: 0;
   }
 
   .custom-col-full {
