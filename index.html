@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Isabelle Xu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link rel="stylesheet" href="css/gallery.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans:wght@300&display=swap"
-        rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <!-- <meta name="viewport" content="width=1280, initial-scale=1"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
-    <div class="topnav">
-        <a href="#" class="logo">Isabelle Xu</a>
-        <div class="topnav-right">
-            <a class="navLink" href="#about">About</a>
-            <!-- <a class="navLink" href="#cs">CS</a> -->
-            <a class="navLink" href="#illustration">Illustration</a>
-            <!-- <a class="navLink" href="#games">Games</a> -->
+    <!-- ---------------- Navbar  ---------------- -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex w-25 me-auto" href="index.html#">
+                <!-- TODO: add logo here -->
+                <!-- <img src="" alt="" width="30" class="d-inline-block align-text-top"> -->
+                <i class="bi bi-moon-stars" style="margin-right: 0.5em; margin-left: 0.5em;"></i>
+                Isabelle Xu
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link nav-tab active" aria-current="page" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-tab" href="gallery.html">Illustration</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav sm-icons mr-0 ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/qeviiii" target="_blank"
+                            rel="noopener noreferrer"><i class="bi-twitter navIcon"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/isabelle-xu-18779274/"
+                            target="_blank" rel="noopener noreferrer"><i class="bi-linkedin navIcon"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/Isebyte" target="_blank"
+                            rel="noopener noreferrer"><i class="bi-github navIcon"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer"><i class="bi-file-text navIcon"></i></i></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!-- Landing Page -->
-    <div class="page" id="home">
+    </nav>
+    <!-- ---------------- Navbar END ---------------- -->
+    <!-- ---------------- Landing Page ---------------- -->
+    <div id="landing-page">
         <header>
             <h1 class="name">ISABELLE XU</h1>
             <h2 class="blurb">Working on Schrödinger's webcomic</h2>
@@ -35,120 +65,57 @@
                     class="downArrow bounce" />
             </a>
         </header>
-        <div class="background"></div>
-        <div class="container">
-            <div class="fade" id="about">
-                <h1 id="helloWorld">"Hello, World"</h1>
-                <img src="img/tempPic.png" width="220" id="myPic">
-                <div id="myInfo">
-                    <p id="intro">Hello! My name is Isabelle Xu and I'm currently a software engineer at LinkedIn with a
-                        passion for both code and digital illustration. For business inquiries or additional information
-                        please contact me at isabelle.xu88@gmail.com. Thank you for stopping by!</p>
-                    <!-- Social Media Icons @ https://www.iconfinder.com/iconsets/free-social-icons -->
-                    <a href="https://twitter.com/qeviiii" target="_blank"><img class="social_media_icon"
-                            src="img/social_media_icons/107155_twitter_circle_icon.png" alt="Twitter" width="56"></a>
-                    <a href="https://www.linkedin.com/in/isabelle-xu-18779274/" target="_blank"><img
-                            class="social_media_icon" src="img/social_media_icons/107159_circle_linkedin_icon.png"
-                            alt="LinkedIn" width="56"></a>
-                    <a href="https://github.com/Isebyte" target="_blank"><img class="social_media_icon"
-                            src="img/social_media_icons/107161_circle_github_icon.png" alt="Github" width="56"></a>
-                    <a href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing"
-                        target="_blank"><img class="social_media_icon"
-                            src="img/social_media_icons/211656_text_document_icon.png" alt="Resume" width="56"></a>
+        <div id="landing-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators landing-indicators">
+                <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item background active" id="landing-carousel-img-1" data-bs-interval="10000"></div>
+                <div class="carousel-item background" id="landing-carousel-img-2" data-bs-interval="10000"></div>
+                <div class="carousel-item background" id="landing-carousel-img-3" data-bs-interval="10000"></div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------- About Section ---------------- -->
+    <div id="about">
+        <div class="container" id="about-container">
+            <div class="row">
+                <div class="col-6 col-md-4 custom-col-full">
+                    <div class="mx-auto d-block">
+                        <h1 id="helloWorld">"Hello, World"</h1>
+                        <img src="img/tempPic.png" width="220" class="rounded mx-auto d-block" alt="Avatar">
+                    </div>
+                </div>
+                <div class="col-md-8 custom-col-full">
+                    <div id="intro-wrapper">
+                        <p id="intro">Hello! My name is Isabelle Xu and I'm currently a software engineer at LinkedIn
+                            with a
+                            passion for both code and digital illustration. For business inquiries or additional
+                            information
+                            please contact me at isabelle.xu88@gmail.com. Thank you for stopping by!</p>
+                        <!-- Social Media Icons @ https://www.iconfinder.com/iconsets/free-social-icons -->
+                        <div id="social-media">
+                            <a href="https://twitter.com/qeviiii" target="_blank"><img class="social_media_icon"
+                                    src="img/social_media_icons/107155_twitter_circle_icon.png" alt="Twitter"></a>
+                            <a href="https://www.linkedin.com/in/isabelle-xu-18779274/" target="_blank"><img
+                                    class="social_media_icon"
+                                    src="img/social_media_icons/107159_circle_linkedin_icon.png" alt="LinkedIn"></a>
+                            <a href="https://github.com/Isebyte" target="_blank"><img class="social_media_icon"
+                                    src="img/social_media_icons/107161_circle_github_icon.png" alt="Github"></a>
+                            <a href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing"
+                                target="_blank"><img class="social_media_icon"
+                                    src="img/social_media_icons/211656_text_document_icon.png" alt="Resume"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- CS -->
-    <!-- <div class="page" id="cs">  
-        <div class="pushDown">
-            <h1 class="center h1withSub">SE Timeline</h1>
-            <hr class="center hrYellow">
-            <h4 class="center headerSub">A quick summary of my history as a software engineer</h4>
-            <br>
-            <section class="timeline timeline-infinite">
-                <ul>
-                    <li>
-                        <div>
-                            <time>Summer 2016</time><br>
-                            Attended first year of college at Washington University in St.Louis
-                            <br><img src="img/James_McKelvey_School_of_Engineering_1line_pos(RGB)1000.png" width="350px"><br>
-                            &#9733;<span style="font-size: 14px;"> Majored in CS & minored in Communication Design</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>Summer 2017-2018</time><br>
-                            Joined State Street Corp for a summer SE internship
-                            <br><img src="img/statestreet.png" width="350px"><br>
-                            &#9733;<span style="font-size: 14px;"> ReactJs, RabbitMQ, Python, SQL</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>Summer 2019</time><br>
-                            Joined Fidelity Investments for a summer SE internship
-                            <br><br><img src="img/fidelity-investments-logo-1.png" width="350px"><br><br>
-                            &#9733;<span style="font-size: 14px;"> Java, Javascript, Jenkins, Junit</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>Winter 2019</time><br>
-                            Graduated from Washington University in St.Louis
-                            <br><br>
-                            &#9733;<span style="font-size: 14px;"> BS in Computer Science</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>2020</time><br>
-                            Joined Capital One as a full time Associate Software Engineer
-                            <br><img src="img/Capital-One-Logo-700x394.png" width="350px"><br>
-                            &#9733;<span style="font-size: 14px;"> Java Springboot, PostgreSQL, AWS, Docker, Jira, Git</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>2021</time><br>
-                            Became a Senior Associate Software Engineer at Capital One
-                            <br><br>
-                            &#9733;<span style="font-size: 14px;"> Java Springboot, Cassandra, Kafka, Splunk, AWS, Docker</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>Summer 2021</time><br>
-                            Became AWS Solutions Architect certified (SAA-C02)
-                            <br><br><img src="img/AWS-Certified_Solutions-Architect_Associate_badge.png" class="centerImg"width="200px">
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div> -->
-    <!-- Illustration -->
-    <div class="page" id="illustration">
-        <div class="pushDown">
-            <div class="gallery">
-                <div class="item">
-                    <img src="img/illustration/Cozy.jpg" alt="Good Morning">
-                </div>
-                <div class="item">
-                    <img src="img/illustration/Cozy_-_2.jpg" alt="Good Night">
-                </div>
-                <div class="item">
-                    <img src="img/illustration/Whale_Island_hxh_.jpg" alt="Whale Island">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Games -->
-    <!-- <div class="page" id="games">
-        <div class="pushDown">
-            <h1 class="center">Coming Soon</h1>
-        </div>
-    </div> -->
 </body>
 
 </html>
