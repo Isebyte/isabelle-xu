@@ -80,7 +80,7 @@
 } */
 
 .modal-header {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     margin-right: 0.5rem;
     border-bottom: 0px;
     padding: 0px;
@@ -92,9 +92,13 @@
     width: 98vw;
     position: absolute;
     left: 50%;
-    top: 45vh;
+    top: 47vh;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.modal-xl {
+    max-width: 95vw;
 }
 
 .center {
@@ -103,4 +107,8 @@
 
 .modal-backdrop.show {
     opacity: 0.9;
+}
+
+.btn-overlap {
+    float: right;
 }

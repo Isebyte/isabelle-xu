@@ -57,45 +57,58 @@
     <!-- ---------------- Navbar END ---------------- -->
     <!-- ---------------- Gallery Start ---------------- -->
     <div class="gallery">
-        <a href="#modal" role="button" data-bs-toggle="modal" data-bs-target="#modal">
+        <!-- Important: Order of images MUST be the same as the order within the carosel! -->
+        <a class="gallery-img" href="#modal" role="button" data-bs-toggle="modal" data-bs-target="#modal">
             <div class="item overlay">
                 <img src="img/illustration/Cozy.jpg" alt="Good Morning">
             </div>
         </a>
-        <div class="item overlay">
-            <img src="img/illustration/Cozy_-_2.jpg" alt="Good Night">
-        </div>
-        <div class="item overlay">
-            <img src="img/illustration/Whale_Island_hxh_.jpg" alt="Whale Island">
-        </div>
+        <a class="gallery-img" href="#modal" role="button" data-bs-toggle="modal" data-bs-target="#modal">
+            <div class="item overlay">
+                <img src="img/illustration/Cozy_-_2.jpg" alt="Good Night">
+            </div>
+        </a>
+        <a class="gallery-img" href="#modal" role="button" data-bs-toggle="modal" data-bs-target="#modal">
+            <div class="item overlay">
+                <img src="img/illustration/Whale_Island_hxh_.jpg" alt="Whale Island">
+            </div>
+        </a>
+        <a class="gallery-img" href="#modal" role="button" data-bs-toggle="modal" data-bs-target="#modal">
+            <div class="item overlay">
+                <img src="img/illustration/Valley.jpg" alt="BOTW">
+            </div>
+        </a>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
         <div class="modal-dialog modal-xl">
+            <button type="button" class="btn-close btn-close-white btn-overlap" data-bs-dismiss="modal"
+            aria-label="Close"></button>
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div class="modal-body">
                     <!-- Carosel -->
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                    <div id="carosel" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <div class="carousel-item active" id="0">
                                 <img src="./img/illustration/Cozy.jpg" class="d-block w-100" alt="Good Morning">
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item" id="1">
                                 <img src="./img/illustration/Cozy_-_2.jpg" class="d-block w-100" alt="Good Night">
                             </div>
-                            <div class="carousel-item">
-                                <img src="./img/illustration/Whale_Island_hxh_.jpg" class="d-block w-100" alt="Whale Island (HxH)">
+                            <div class="carousel-item" id="2">
+                                <img src="./img/illustration/Whale_Island_hxh_.jpg" class="d-block w-100"
+                                    alt="Whale Island (HxH)">
+                            </div>
+                            <div class="carousel-item" id="3">
+                                <img src="./img/illustration/Valley.jpg" class="d-block w-100" alt="BOTW">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carosel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carosel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -108,7 +121,8 @@
 </body>
 <script src="js/main.js"></script>
 <script>
-
+    console.log("init carosel toggle");
+    initImgCaroselToggle();
 </script>
 
 </html>
