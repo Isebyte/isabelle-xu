@@ -118,6 +118,9 @@ header {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 #landing-carousel-img-2 {
@@ -125,6 +128,9 @@ header {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 #landing-carousel-img-3 {
@@ -132,6 +138,9 @@ header {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 @keyframes fadeIn {
