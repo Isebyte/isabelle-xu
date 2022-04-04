@@ -14,3 +14,39 @@ function initImgCarouselToggle() {
         });
     }
 }
+
+/**
+ * Add smooth scrolling to all elements of class "smoothA"
+ */ 
+function addSmoothScrolling() {
+    let smoothIds = document.getElementsByClassName("smoothA");
+    for (let i = 0; i < smoothIds.length; ++i) {
+        $(smoothIds[i]).on('click', function (event) {
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                let hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    }
+}
+
+function fadeInOnScroll() {
+    $(window).scroll(function () {
+        $('.fade').each(function (i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object) {
+                $(this).animate({
+                    'opacity': '1'
+                }, 1000);
+            }
+        });
+    });
+}

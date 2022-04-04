@@ -302,10 +302,11 @@ header {
 
 #helloWorld {
   text-align: center;
+  font-size: 2rem;
 }
 
 #hi {
-  margin-left: 10vw;
+  margin-left: 8vw;
 }
 
 .social_media_icon {
