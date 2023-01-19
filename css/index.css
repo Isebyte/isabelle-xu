@@ -123,7 +123,7 @@ header {
   -o-background-size: cover;
 }
 
-#landing-carousel-img-2 {
+#landing-carousel-img-2 { 
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(../img/illustration/No_Swimming.jpg) fixed;
   background-size: cover;
   background-position: center center;
