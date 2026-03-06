@@ -1,125 +1,145 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Isabelle Xu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!--  Bootstrap Font Icon CSS  --> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/index.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isabelle Xu</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8a87c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'/></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Isabelle Xu - Software Engineer & Illustrator">
+  <meta property="og:description" content="Software engineer at LinkedIn with a passion for code and digital illustration.">
+  <meta property="og:image" content="img/illustration/Cozy_-_2.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="img/illustration/Cozy_-_2.jpg">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
 <body>
-    <!-- ---------------- Navbar  ---------------- -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex w-25 me-auto" href="index.html#">
-                <!-- TODO: add logo here -->
-                <!-- <img src="" alt="" width="30" class="d-inline-block align-text-top"> -->
-                <i class="bi bi-moon-stars" style="margin-right: 0.5em; margin-left: 0.5em;"></i>
-                Isabelle Xu
-            </a>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto w-100 justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link nav-tab active" aria-current="page" href="index.html#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-tab" href="gallery.html">Illustration</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav sm-icons mr-0 ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/8Weru" target="_blank"
-                            rel="noopener noreferrer"><i class="bi-twitter navIcon"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/isabelle-xu-18779274/"
-                            target="_blank" rel="noopener noreferrer"><i class="bi-linkedin navIcon"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/Isebyte" target="_blank"
-                            rel="noopener noreferrer"><i class="bi-github navIcon"></i></a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing"
-                            target="_blank" rel="noopener noreferrer"><i class="bi-file-text navIcon"></i></i></a></li>
-                </ul>
-            </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+        <path d="M19 3v4"/><path d="M21 5h-4"/>
+      </svg>
+      Isabelle Xu
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="gallery.html">Illustration</a></li>
+      </ul>
+
+      <span class="nav-divider"></span>
+
+      <div class="nav-right">
+        <div class="nav-social">
+          <a href="https://8weru.carrd.co/" target="_blank" rel="noopener noreferrer" aria-label="Links">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/isabelle-xu-18779274/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/Isebyte" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </a>
         </div>
-    </nav>
-    <!-- ---------------- Navbar END ---------------- -->
-    <!-- ---------------- Landing Page ---------------- -->
-    <div id="landing-page">
-        <header>
-            <h1 class="name">ISABELLE XU</h1>
-            <h2 class="blurb">Working on Schrödinger's webcomic</h2>
-            <a class="smoothA" href="#about">
-                <img width="40" height="40" alt=""
-                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4="
-                    class="downArrow bounce" />
-            </a>
-        </header>
-        <div id="landing-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators landing-indicators">
-                <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item background active" id="landing-carousel-img-1" data-bs-interval="10000"></div>
-                <div class="carousel-item background" id="landing-carousel-img-2" data-bs-interval="10000"></div>
-                <div class="carousel-item background" id="landing-carousel-img-3" data-bs-interval="10000"></div>
-            </div>
-        </div>
+
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
     </div>
-    <!-- ---------------- About Section ---------------- -->
-    <div id="about">
-        <div class="container" id="about-container">
-            <div class="row">
-                <div class="col-6 col-md-4 custom-col-full">
-                    <div id="hi">
-                        <div class="mx-auto d-block">
-                            <h1 id="helloWorld">"Hello, World"</h1>
-                            <img src="img/tempPic.png" width="220" class="rounded mx-auto d-block" alt="Avatar">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 custom-col-full">
-                    <div id="intro-wrapper">
-                        <p id="intro">Hello! My name is Isabelle Xu and I'm currently a software engineer at LinkedIn
-                            with a
-                            passion for both code and digital illustration. For business inquiries or additional
-                            information
-                            please contact me at isabelle.xu88@gmail.com. Thank you for stopping by!</p>
-                        <!-- Social Media Icons @ https://www.iconfinder.com/iconsets/free-social-icons -->
-                        <div id="social-media">
-                            <a href="https://twitter.com/leafytea_" target="_blank"><img class="social_media_icon"
-                                    src="img/social_media_icons/107155_twitter_circle_icon.png" alt="Twitter"></a>
-                            <a href="https://www.linkedin.com/in/isabelle-xu-18779274/" target="_blank"><img
-                                    class="social_media_icon"
-                                    src="img/social_media_icons/107159_circle_linkedin_icon.png" alt="LinkedIn"></a>
-                            <a href="https://github.com/Isebyte" target="_blank"><img class="social_media_icon"
-                                    src="img/social_media_icons/107161_circle_github_icon.png" alt="Github"></a>
-                            <a href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing"
-                                target="_blank"><img class="social_media_icon"
-                                    src="img/social_media_icons/211656_text_document_icon.png" alt="Resume"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-slide active" style="background-image: url('img/illustration/Cozy_-_2.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('img/illustration/No_Swimming.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('img/illustration/Whale_Island_hxh_.jpg')"></div>
+      <div class="hero-overlay"></div>
     </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Isabelle Xu</h1>
+      <p class="hero-subtitle">Software Engineer & Illustrator</p>
+    </div>
+    <div class="hero-indicators">
+      <button class="hero-dot active" data-slide="0"></button>
+      <button class="hero-dot" data-slide="1"></button>
+      <button class="hero-dot" data-slide="2"></button>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-header fade-in">
+      <span class="section-label">About</span>
+    </div>
+    <div class="about-layout fade-in">
+      <div class="about-avatar">
+        <img src="img/tempPic.png" alt="Avatar">
+      </div>
+      <div class="about-text">
+        <h2>Hello, World</h2>
+        <p>
+          Hello! My name is Isabelle Xu and I'm currently a software engineer at LinkedIn with a
+          passion for both code and digital illustration. For business inquiries or additional
+          information please contact me at isabelle.xu88@gmail.com. Thank you for stopping by!
+        </p>
+        <a class="about-contact" href="mailto:isabelle.xu88@gmail.com">isabelle.xu88@gmail.com</a>
+
+        <div class="about-social">
+          <a href="https://8weru.carrd.co/" target="_blank" rel="noopener noreferrer" aria-label="Links">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/isabelle-xu-18779274/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/Isebyte" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://drive.google.com/file/d/1qe8PjGj9TB-m-LgIjqjaOXf9jcfqbyU5/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Isabelle Xu</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-<script src="js/main.js"></script>
-<script>
-    addSmoothScrolling();
-    fadeInOnScroll();
-</script>
 </html>
