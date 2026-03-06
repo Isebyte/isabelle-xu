@@ -152,7 +152,7 @@ img {
 
 .nav-social {
   display: flex;
-  gap: 1rem;
+  gap: 0;
   align-items: center;
 }
 
@@ -161,6 +161,10 @@ img {
   transition: color var(--transition);
   display: flex;
   align-items: center;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
 }
 
 .nav-social a:hover {
@@ -280,6 +284,7 @@ img {
 .hero {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,26 +376,40 @@ img {
 }
 
 .hero-dot {
-  width: 6px;
-  height: 6px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: transparent;
   border: none;
   cursor: pointer;
   transition: var(--transition);
   padding: 0;
+  position: relative;
 }
 
-.hero-dot.active {
+.hero-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: var(--transition);
+}
+
+.hero-dot.active::after {
   background: rgba(255, 255, 255, 0.85);
-  transform: scale(1.3);
+  transform: translate(-50%, -50%) scale(1.3);
 }
 
-[data-theme="light"] .hero-dot {
+[data-theme="light"] .hero-dot::after {
   background: rgba(0, 0, 0, 0.2);
 }
 
-[data-theme="light"] .hero-dot.active {
+[data-theme="light"] .hero-dot.active::after {
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -618,6 +637,13 @@ img {
   transform: scale(1.03);
 }
 
+/* Touch devices: always show titles since hover doesn't work */
+@media (hover: none) {
+  .gallery-item::after {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 900px) {
   .gallery-grid {
     columns: 2;
@@ -673,13 +699,18 @@ img {
 
 .lightbox-close {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
-  padding: 8px;
+  padding: 12px;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color var(--transition);
 }
 
@@ -701,6 +732,11 @@ img {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   padding: 1rem;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color var(--transition);
 }
 
@@ -729,6 +765,33 @@ img {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Mobile lightbox: move nav below image */
+@media (max-width: 600px) {
+  .lightbox-nav {
+    top: auto;
+    bottom: 3rem;
+    transform: none;
+  }
+
+  .lightbox-prev {
+    left: 25%;
+  }
+
+  .lightbox-next {
+    right: 25%;
+  }
+
+  .lightbox-img {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+
+  .lightbox-caption {
+    bottom: 0.75rem;
+  }
 }
 
 /* ================================
