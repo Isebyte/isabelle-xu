@@ -1,0 +1,13 @@
+{
+  "name": "isabelle-xu-site",
+  "private": true,
+  "scripts": {
+    "optimize": "node scripts/optimize-images.js"
+  },
+  "volta": {
+    "node": "20.20.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  }
+}
