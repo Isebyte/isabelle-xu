@@ -20,6 +20,22 @@
 
 
 /* ================================
+   Mobile Nav - close on link tap
+   ================================ */
+
+(function initMobileNav() {
+  const menu = document.querySelector('.nav-menu');
+  if (!menu) return;
+
+  menu.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+    });
+  });
+})();
+
+
+/* ================================
    Hero Slideshow
    ================================ */
 
@@ -184,4 +200,21 @@
     if (e.key === 'ArrowRight') next();
     if (e.key === 'ArrowLeft') prev();
   });
+
+  // Touch swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+  }, { passive: true });
 })();
