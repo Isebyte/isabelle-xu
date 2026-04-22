@@ -246,7 +246,11 @@ img {
   .nav-menu {
     display: none;
     position: fixed;
-    inset: 60px 0 0 0;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
     background: var(--nav-mobile-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -254,6 +258,7 @@ img {
     align-items: center;
     padding: 2.5rem 2rem;
     gap: 2rem;
+    overflow-y: auto;
   }
 
   .nav-menu.open {
